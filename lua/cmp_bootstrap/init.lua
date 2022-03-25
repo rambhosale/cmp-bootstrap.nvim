@@ -33,7 +33,7 @@ local compDoc = function(className)
     end
 
     local screenPrefix = string.sub(className, 4,6)
-    local isSmallDevice = false
+    -- local isSmallDevice = false
 
     if screenPrefix == 'md-' then
         out = "// Medium devices (tablets, 768px and up) \n@media (min-width: 768px) {\n\t" .. out
@@ -45,7 +45,7 @@ local compDoc = function(className)
         out = "// XX-Large devices (larger desktops, 1400px and up) \n@media (min-width: 1400px) { \n\t" .. out
     else
         out = "// Small devices (landscape phones, 576px and up) \n@media (min-width: 576px) { \n\t" .. out
-        isSmallDevice = true
+        -- isSmallDevice = true
     end
 
     local size = className:match('%d$')
@@ -88,7 +88,7 @@ source.complete = function(self, request, callback)
   end
 
   local generatedClasses = {}
-  for i, class in pairs(items) do
+  for _, class in pairs(items) do
     table.insert(generatedClasses, {
       word=class,
       label=class,
