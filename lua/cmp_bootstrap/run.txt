@@ -1,7 +1,0 @@
-lua vim.opt.runtimepath:append("/home/zeno/Dev/lua/cmp-bootstrap")
-
-require("cmp").register_source("cmp_bootstrap", require("cmp_bootstrap").new())
-lua require("cmp").config.sources({{ name = 'cmp_bootstrap' }})
-
-
-lua require("cmp").setup.filetype('txt', {sources = require("cmp").config.sources({{ name = 'cmp_bootstrap' }})})
