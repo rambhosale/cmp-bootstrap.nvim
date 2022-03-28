@@ -92,7 +92,7 @@ source.complete = function(self, request, callback)
       label = class,
       insertText = class,
       filterText = class,
-      kind = cmp.lsp.CompletionItemKind.Value,
+      kind = cmp.lsp.MarkupKind.PlainText,
       documentation = generateDoc(class),
     })
   end
